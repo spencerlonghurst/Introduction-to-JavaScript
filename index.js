@@ -19,7 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 22;
+//console.log(true);
 
 
 /*
@@ -32,9 +33,11 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let num1 = 1;
+let num2 = 2;
+if (num1 === 1) {
+  (num1 = num1+num2);
+};
 
 
 /*
@@ -47,7 +50,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let stringVariable = Number('1999');
+//console.log(stringVariable);
 
 
 
@@ -60,11 +64,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b
 }
-
-
+multiply(2,3)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,10 +79,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  return humanYears*7;
 }
-
+dogYears(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,10 +112,25 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if (weight <= 5 && age >= 1) {
+    return weight*0.05;
+  }else if (weight >= 6 && weight <= 10 && age >= 1) {
+    return weight*0.04;
+  }else if (weight >= 11 && weight <= 15 && age >= 1) {
+    return weight*0.03;
+  }else if (weight > 15 && age >= 1) {
+    return weight*0.02;
+  }
+  if (weight > 0 && age >= 0.167 && age <= 0.333) {
+    return (weight*0.10);
+  }else if (weight > 0 && age >= 0.334 && age <= 0.583) {
+    return (weight*0.05);
+  }else if (weight > 0 && age >= 0.584 && age <= 1) {
+    return (weight*0.04);
+  }
 }
-
+hungryDog(15, 1);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
